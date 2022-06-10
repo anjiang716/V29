@@ -1067,7 +1067,7 @@ break
 case 'tebakgambar': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
 if (tebakgambar.hasOwnProperty(sender.split('@')[0])) return reply("Selesaikan game sebelum nya terlebih dahulu")
-nyz115 = await fetchJson(`https://myselfff.herokuapp.com/docs/games/${command}`)
+nyz115 = await fetchJson(`https://api-rztrial.herokuapp.com/api/games/${command}?apikey=Rztrial`)
 nyz116 = nyz115.list.soal
 jawaban = nyz115.list.jawaban
 nyz117 = await getBuffer(nyz116)
@@ -1086,7 +1086,7 @@ break
 case 'caklontong': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
 if (caklontong.hasOwnProperty(sender.split('@')[0])) return reply("selesaikan game sebelum nya terlebih dahulu")
-nyz115 = await fetchJson(`https://myselfff.herokuapp.com/docs/games/${command}`)
+nyz115 = await fetchJson(`https://api-rztrial.herokuapp.com/api/games/${command}?apikey=Rztrial`)
 nyz116 = nyz115.list.soal
 jawaban = nyz115.list.jawaban
 console.log(`jawaban : ` + jawaban)
@@ -1104,7 +1104,7 @@ break
 case 'tebaklirik': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
 if (tebaklirik.hasOwnProperty(sender.split('@')[0])) return reply("selesaikan game sebelum nya terlebih dahulu")
-nyz115 = await fetchJson(`https://myselfff.herokuapp.com/docs/games/${command}`)
+nyz115 = await fetchJson(`https://api-rztrial.herokuapp.com/api/games/${command}?apikey=Rztrial`)
 nyz116 = nyz115.list.soal
 jawaban = nyz115.list.jawaban
 console.log(`jawaban : ` + jawaban)
@@ -1122,7 +1122,7 @@ break
 case 'tebakkimia': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
 if (tebakkimia.hasOwnProperty(sender.split('@')[0])) return reply("selesaikan game sebelum nya terlebih dahulu")
-nyz115 = await fetchJson(`https://myselfff.herokuapp.com/docs/games/${command}`)
+nyz115 = await fetchJson(`https://api-rztrial.herokuapp.com/api/games/${command}?apikey=Rztrial`)
 nyz116 = nyz115.list.soal
 jawaban = nyz115.list.jawaban
 console.log(`jawaban : ` + jawaban)
@@ -1140,7 +1140,7 @@ break
 case 'tebakjenaka': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
 if (tebakjenaka.hasOwnProperty(sender.split('@')[0])) return reply("selesaikan game sebelum nya terlebih dahulu")
-nyz115 = await fetchJson(`https://myselfff.herokuapp.com/docs/games/${command}`)
+nyz115 = await fetchJson(`https://api-rztrial.herokuapp.com/api/games/${command}?apikey=Rztrial`)
 nyz116 = nyz115.list.soal
 jawaban = nyz115.list.jawaban
 console.log(`jawaban : ` + jawaban)
@@ -1158,7 +1158,7 @@ break
 case 'tebakbendera': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
 if (tebakbendera.hasOwnProperty(sender.split('@')[0])) return reply("selesaikan game sebelum nya terlebih dahulu")
-nyz115 = await fetchJson(`https://myselfff.herokuapp.com/docs/games/${command}`)
+nyz115 = await fetchJson(`https://api-rztrial.herokuapp.com/api/games/${command}?apikey=Rztrial`)
 nyz116 = nyz115.list.soal
 jawaban = nyz115.list.jawaban
 console.log(`jawaban : ` + jawaban)
@@ -1775,7 +1775,7 @@ case 'wallneon': case 'wallrandom': case 'wallcode': case 'wallpubg': case 'wall
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 	
 try{
 prosess("[❗] SEDANG DIPROSESS")						
-nyz2 = await fetchJson(`https://myselfff.herokuapp.com/docs/wallpaper/${command}`) 
+nyz2 = await fetchJson(`https://api-rztrial.herokuapp.com/api/wallpaper/${command}?apikey=Rztrial`) 
 nyz3 = await getBuffer(nyz2.list.gambar)
 nayla.sendMessage(from, {image : nyz3, caption:"SUKSES" }, {quoted:nay}) 						
 } catch (e) {
@@ -1786,7 +1786,7 @@ case 'audio1': case 'audio2': case 'audio3': case 'audio4': case 'audio5': case 
 case 'audio11': case 'audio12': case 'audio13': case 'audio14': case 'audio15': case 'audio16': case 'audio17': case 'audio18': case 'audio19': case 'audio20': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
 try{
-nayla.sendMessage(from,{ audio: { url: `media/audio/nyz-${command}.m4a`},ptt:true, mimetype: 'audio/mp4'}, {quoted:{key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: from } : {})},message: {"extendedTextMessage": {"text": `HY : ${pushname}\n❀ RUNTIME : ${kyun(runtime)}`, 'title':'2', 'jpegThumbnail': fs.readFileSync(`./media/image/audio.jpg`)}}}})
+nayla.sendMessage(from,{ audio: { url: `media/audio/nyz-${command}?apikey=Rztrial.m4a`},ptt:true, mimetype: 'audio/mp4'}, {quoted:{key: {fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: from } : {})},message: {"extendedTextMessage": {"text": `HY : ${pushname}\n❀ RUNTIME : ${kyun(runtime)}`, 'title':'2', 'jpegThumbnail': fs.readFileSync(`./media/image/audio.jpg`)}}}})
 } catch (e) {
 errorr("ERROR")
 }
@@ -1798,7 +1798,7 @@ if (!isGroup) return reply(respon.onlyGroup(pushname));
 try{
 if (nay.message.extendedTextMessage === undefined || nay.message.extendedTextMessage === null) return reply('Tag orang nya kak')
 const meention = nay.message.extendedTextMessage.contextInfo.mentionedJid
-stickrndm = fs.readFileSync(`./media/sticker/${command}.webp`)
+stickrndm = fs.readFileSync(`./media/sticker/${command}?apikey=Rztrial.webp`)
 nayla.sendMessage(from, {sticker : stickrndm}, {quoted: { key: { fromMe: false, participant: `${meention}`, ...({}) }, message: { "extendedTextMessage": { "text": `😄`} } }}) 		 		   
 } catch (e) {
 errorr("ERROR")
@@ -1813,7 +1813,7 @@ try{
 if (nay.message.extendedTextMessage === undefined || nay.message.extendedTextMessage === null) return reply('tag orang nya kak')
 const meention = nay.message.extendedTextMessage.contextInfo.mentionedJid
 stickrndm = fs.readFileSync(`./media/sticker/panic.webp`)
-nayla.sendMessage(from, {sticker : stickrndm}, {quoted: { key: { fromMe: false, participant: `${meention}`, ...({}) }, message: { "extendedTextMessage": { "text": `Uhh... gw yang ter${command} di sini....`} } }}) 		 		   
+nayla.sendMessage(from, {sticker : stickrndm}, {quoted: { key: { fromMe: false, participant: `${meention}`, ...({}) }, message: { "extendedTextMessage": { "text": `Uhh... gw yang ter${command}?apikey=Rztrial di sini....`} } }}) 		 		   
 } catch (e) {
 errorr("ERROR")
 }
@@ -1826,7 +1826,7 @@ angka = ['1','2','3','4','5','6','7','8','9']
 const randomnay1 = angka[Math.floor(Math.random() * (angka.length))]					
 const randomnay2 = angka[Math.floor(Math.random() * (angka.length))]
 N = `• *NAME* : ${pushname}\n`,
-N += `• *COMMAND* : ${command}\n`,
+N += `• *COMMAND* : ${command}?apikey=Rztrial\n`,
 N += `• *RATE* : *${randomnay1}${randomnay2}% :v*`
 reply(N)
 break
@@ -1957,14 +1957,14 @@ case 'horror': case 'metallic': case 'circuit': case 'sketch': case 'halloween':
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")
 if (!q) return reply("text nya mana")		
 prosess("[❗] SEDANG DIPROSES")
-nyz5 = await fetchJson(`https://myselfff.herokuapp.com/docs/textpro/${command}?text=${q}`) 
+nyz5 = await fetchJson(`https://api-rztrial.herokuapp.com/api/textpro/${command}?apikey=Rztrial?text=${q}`) 
 nyz4 = await getBuffer(nyz5.result)
 nayla.sendMessage(from, {image:nyz4, caption: "SUKSES"}, {quoted:nay}) 		
 break	
  case 'artinama': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")
 if (!q) return reply("Textnya mana")
-nyz6 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/artinama?query=${q}`)
+nyz6 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/artinama?query=${q}`)
 nyz7 = `[ *ARTI NAMA* ]\n`,
 nyz7 += `=> *ARTINAMA* : ${nyz6.result.list}`
 reply(nyz7)	
@@ -1972,7 +1972,7 @@ break
 case 'artimimpi': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")
 if (!q) return reply("Textnya mana")
-nyz8 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/artimimpi?query=${q}`)
+nyz8 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/artimimpi?query=${q}`)
 nyz31 = `[ *ARTI MIMPI* ]\n`,
 nyz31 += `=> *ARTINAMA* : ${nyz8.result.list}`
 reply(nyz31)	
@@ -1980,7 +1980,7 @@ break
 case 'resepmasakan': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")
 if (!q) return reply("Textnya mana")
-nyz9 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/resepmasakan?query=${q}`)
+nyz9 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/resepmasakan?query=${q}`)
 nyz32 = `[ *RESEP MASAKAN* ]\n`,
 nyz32 += `=> *NAMA* : ${nyz9.list.nama}\n`,
 nyz32 += `=> *CARA* : ${nyz9.list.cara}`
@@ -1989,7 +1989,7 @@ break
 case 'katajago': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")
 if (!q) return reply("Textnya mana")
-nyz10 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/katajago?query=${q}`)
+nyz10 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/katajago?query=${q}`)
 nyz33 = `[ *KATA JAGO* ]\n`,
 nyz33 += `=> *RESULT* : ${nyz10.result.list}`
 reply(nyz33)	
@@ -1997,7 +1997,7 @@ break
 case 'besarkecil': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")	
 if (!q) return reply("Textnya mana")
-nyz11 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/besarkecil?query=${q}`)
+nyz11 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/besarkecil?query=${q}`)
 nyz34 = `[ *BESAR KECIL* ]\n`,
 nyz34 += `=> *RESULT* : ${nyz11.result.list}`
 reply(nyz34)	
@@ -2005,7 +2005,7 @@ break
 case 'jumlahhuruf': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")	
 if (!q) return reply("Textnya mana")
-nyz12 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/jumlahhuruf?query=${q}`)
+nyz12 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/jumlahhuruf?query=${q}`)
 nyz35 = `[ *JUMLAH HURUF* ]\n`,
 nyz35 += `=> *RESULT* : ${nyz12.result.list}`
 reply(nyz35)	
@@ -2013,14 +2013,14 @@ break
 case 'jumlahangka': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")		
 if (!q) return reply("angka mana")
-nyz13 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/jumlahangka?query=${q}`)
+nyz13 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/jumlahangka?query=${q}`)
 nyz36 = `[ *JUMLAH ANGKA* ]\n`,
 nyz36 += `=> *RESULT* : ${nyz13.result.list}`
 reply(nyz36)
 break
 case 'infogempa': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")		
-nyz14 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/infogempa`)
+nyz14 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/infogempa`)
 nyz37 = `[ *INFO GEMPA* ]\n`,
 nyz37 += `=> *WAKTU* : ${nyz14.result.waktu}\n`,
 nyz37 += `=> *KEDALAMAN* : ${nyz14.result.kedalaman}\n`,
@@ -2032,7 +2032,7 @@ break
 case 'kapital': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")	
 if (!q) return reply("Textnya mana")
-nyz15 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/kapital?query=${q}`)
+nyz15 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/kapital?query=${q}`)
 nyz38 = `[ *KAPITAL* ]\n`,
 nyz38 += `=> *RESULT* : ${nyz15.result.list}`
 reply(nyz38)
@@ -2040,7 +2040,7 @@ break
 case 'halah': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")	
 if (!q) return reply("Textnya mana")
-nyz16 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/halah?query=${q}`)
+nyz16 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/halah?query=${q}`)
 nyz39 = `[ *HALAH* ]\n`,
 nyz39 += `=> *RESULT* : ${nyz16.result.list}`
 reply(nyz39)
@@ -2048,7 +2048,7 @@ break
 case 'hilih': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")	
 if (!q) return reply("Textnya mana")
-nyz17 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/hilih?query=${q}`)
+nyz17 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/hilih?query=${q}`)
 nyz40 = `[ *HILIH* ]\n`,
 nyz40 += `=> *RESULT* : ${nyz17.result.list}`
 reply(nyz40)
@@ -2056,7 +2056,7 @@ break
 case 'huluh': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")	
 if (!q) return reply("Textnya mana")
-nyz18 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/huluh?query=${q}`)
+nyz18 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/huluh?query=${q}`)
 nyz41 = `[ *HULUH* ]\n`,
 nyz41 += `=> *RESULT* : ${nyz18.result.list}`
 reply(nyz41)
@@ -2064,7 +2064,7 @@ break
 case 'heleh': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")	
 if (!q) return reply("Textnya mana")
-nyz19 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/heleh?query=${q}`)
+nyz19 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/heleh?query=${q}`)
 nyz42 = `[ *HELEH* ]\n`,
 nyz42 += `=> *RESULT* : ${nyz19.result.list}`
 reply(nyz42)
@@ -2072,7 +2072,7 @@ break
 case 'holoh': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")	
 if (!q) return reply("Textnya mana")
-nyz20 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/holoh?query=${q}`)
+nyz20 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/holoh?query=${q}`)
 nyz43 = `[ *HOLOH* ]\n`,
 nyz43 += `=> *RESULT* : ${nyz20.result.list}`
 reply(nyz43)
@@ -2080,7 +2080,7 @@ break
 case 'bilangangka': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")		
 if (!q) return reply("angka mana")
-nyz21 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/bilangangka?query=${q}`)
+nyz21 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/bilangangka?query=${q}`)
 nyz44 = `[ *BILANG ANGKA* ]\n`,
 nyz44 += `=> *RESULT* : ${nyz21.result.list}`
 reply(nyz44)
@@ -2088,7 +2088,7 @@ break
 case 'balikhuruf': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")	
 if (!q) return reply("Textnya mana")
-nyz23 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/balikhuruf?query=${q}`)
+nyz23 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/balikhuruf?query=${q}`)
 nyz46 = `[ *BALIK HURUF* ]\n`,
 nyz46 += `=> *RESULT* : ${nyz23.result.list}`
 reply(nyz46)
@@ -2096,7 +2096,7 @@ break
 case 'wikipedia': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")	
 if (!q) return reply("Textnya mana")
-nyz24 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/wikipedia?query=${q}`)
+nyz24 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/wikipedia?query=${q}`)
 nyz47 = `[ *WIKIPEDIA* ]\n`,
 nyz47 += `=> *RESULT* : ${nyz24.result.list}`
 reply(nyz47)
@@ -2104,7 +2104,7 @@ break
 case 'balikangka': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")
 if (!q) return reply("angka mana")
-nyz25 = await fetchJson(`https://myselfff.herokuapp.com/docs/random/balikangka?query=${q}`)
+nyz25 = await fetchJson(`https://api-rztrial.herokuapp.com/api/random/balikangka?query=${q}`)
 nyz48 = `[ *BALIK ANGKA* ]\n`,
 nyz48 += `=> *RESULT* : ${nyz25.result.list}`
 reply(nyz48)
@@ -2138,13 +2138,13 @@ break
 case 'attp': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")
 if (!q) return reply("Textnya mana kak")
-nyz200 = await getBuffer(`https://myselfff.herokuapp.com/docs/random/attp?query=${q}`)
+nyz200 = await getBuffer(`https://api-rztrial.herokuapp.com/api/random/attp?query=${q}`)
 nayla.sendMessage(from, {sticker:nyz200}, {quoted:nay1})
 break	
 case 'grubwa': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")  	
 if (!q) return reply("Textnya mana kak")
-nyz49 = await fetchJson(`https://myselfff.herokuapp.com/docs/search/grubwa?query=${q}`)
+nyz49 = await fetchJson(`https://api-rztrial.herokuapp.com/api/search/grubwa?query=${q}`)
 nyz50 = `[ *GRUB WA* ]\n`,
 nyz50 += `=> *NAMA* : ${nyz49.result.judul}\n`,
 nyz50 += `=> *LINK* : ${nyz49.result.link}\n`
@@ -2153,7 +2153,7 @@ break
 case 'arena': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
 if (!q) return reply("Textnya mana kak")
-nyz51 = await fetchJson(`https://myselfff.herokuapp.com/docs/search/arena?query=${q}`)
+nyz51 = await fetchJson(`https://api-rztrial.herokuapp.com/api/search/arena?query=${q}`)
 nyz53 = nyz51.result
 nyz52 = `[ *ARENA* ]\n`,
 nyz52 += `=> *SPEK* : ${nyz53.spek}\n`,
@@ -2170,7 +2170,7 @@ break
 case 'amazon': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
 if (!q) return reply("Textnya mana kak")
-nyz54 = await fetchJson(`https://myselfff.herokuapp.com/docs/search/amazon?query=${q}`)
+nyz54 = await fetchJson(`https://api-rztrial.herokuapp.com/api/search/amazon?query=${q}`)
 nyz55 = nyz54.result
 nyz56 = `[ *AMAZON* ]\n`,
 nyz56 += `=> *ITEM* : ${nyz55.item}\n`,
@@ -2187,7 +2187,7 @@ break
 case 'shopee': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
 if (!q) return reply("Textnya mana kak")
-nyz57 = await fetchJson(`https://myselfff.herokuapp.com/docs/search/shopee?query=${q}`)
+nyz57 = await fetchJson(`https://api-rztrial.herokuapp.com/api/search/shopee?query=${q}`)
 nyz58 = nyz57.result
 nyz59 = `[ *SHOPEE* ]\n`,
 nyz59 += `=> *JUDUL* : ${nyz58.judul}\n`,
@@ -2202,7 +2202,7 @@ break
 case 'thelazy': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
 if (!q) return reply("Textnya mana kak")
-nyz70 = await fetchJson(`https://myselfff.herokuapp.com/docs/search/thelazy?query=${q}`)
+nyz70 = await fetchJson(`https://api-rztrial.herokuapp.com/api/search/thelazy?query=${q}`)
 nyz71 = nyz70.result
 nyz72 = `[ *THELAZY* ]\n`,
 nyz72 += `=> *TITLE* : ${nyz71.title}\n`,
@@ -2216,7 +2216,7 @@ break
 case 'cersex': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
 if (!q) return reply("Textnya mana kak")
-nyz73 = await fetchJson(`https://myselfff.herokuapp.com/docs/search/cersex?query=${q}`)
+nyz73 = await fetchJson(`https://api-rztrial.herokuapp.com/api/search/cersex?query=${q}`)
 nyz74 = nyz73.result
 nyz75 = `[ *CERSEX* ]\n`,
 nyz75 += `=> *TITLE* : ${nyz74.title}\n`,
@@ -2228,7 +2228,7 @@ break
 case 'ytsearch': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
 if (!q) return reply("Textnya mana kak")
-nyz76 = await fetchJson(`https://myselfff.herokuapp.com/docs/search/ytsearch?query=${q}`)
+nyz76 = await fetchJson(`https://api-rztrial.herokuapp.com/api/search/ytsearch?query=${q}`)
 nyz77 = nyz76.result
 nyz78 = `[ *YTSEARCH* ]\n`,
 nyz78 += `=> *TITLE* : ${nyz77.title}\n`,
@@ -2242,7 +2242,7 @@ break
 case 'rexdl': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
 if (!q) return reply("Textnya mana kak")
-nyz79 = await fetchJson(`https://myselfff.herokuapp.com/docs/search/rexdl?query=${q}`)
+nyz79 = await fetchJson(`https://api-rztrial.herokuapp.com/api/search/rexdl?query=${q}`)
 nyz80 = nyz79.result
 nyz81 = `[ *REXDL* ]\n`,
 nyz81 += `=> *TITLE* : ${nyz80.title}\n`,
@@ -2254,7 +2254,7 @@ break
 case 'sfile': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")
 if (!q) return reply("Textnya mana kak")
-nyz85 = await fetchJson(`https://myselfff.herokuapp.com/docs/search/sfile?query=${q}`)
+nyz85 = await fetchJson(`https://api-rztrial.herokuapp.com/api/search/sfile?query=${q}`)
 nyz86 = nyz85.result
 nyz87 = `[ *SFILE* ]\n`,
 nyz87 += `=> *TITLE* : ${nyz86.title}\n`,
@@ -2264,7 +2264,7 @@ reply(nyz87)
 break
 case 'berita': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
-nyz88 = await fetchJson(`https://myselfff.herokuapp.com/docs/news/berita`)
+nyz88 = await fetchJson(`https://api-rztrial.herokuapp.com/api/news/berita`)
 nyz89 = nyz88.result
 nyz90 = `[ *BERITA* ]\n`,
 nyz90 += `=> *TITLE* : ${nyz89.title}\n`,
@@ -2273,7 +2273,7 @@ reply(nyz90)
 break
 case 'kompas': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
-nyz91 = await fetchJson(`https://myselfff.herokuapp.com/docs/news/kompas`)
+nyz91 = await fetchJson(`https://api-rztrial.herokuapp.com/api/news/kompas`)
 nyz92 = nyz91.result
 nyz93 = `[ *KOMPAS* ]\n`,
 nyz93 += `=> *TITLE* : ${nyz92.title}\n`,
@@ -2282,7 +2282,7 @@ reply(nyz93)
 break
 case 'okezone': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
-nyz94 = await fetchJson(`https://myselfff.herokuapp.com/docs/news/okezone`)
+nyz94 = await fetchJson(`https://api-rztrial.herokuapp.com/api/news/okezone`)
 nyz95 = nyz94.result
 nyz96 = `[ *OKEZONE* ]\n`,
 nyz96 += `=> *TITLE* : ${nyz95.title}\n`,
@@ -2291,7 +2291,7 @@ reply(nyz96)
 break
 case 'antara': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
-nyz97 = await fetchJson(`https://myselfff.herokuapp.com/docs/news/antara`)
+nyz97 = await fetchJson(`https://api-rztrial.herokuapp.com/api/news/antara`)
 nyz98 = nyz97.result
 nyz99 = `[ *ANTARA* ]\n`,
 nyz99 += `=> *TITLE* : ${nyz98.title}\n`,
@@ -2300,7 +2300,7 @@ reply(nyz99)
 break
 case 'jam': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
-nyz100 = await fetchJson(`https://myselfff.herokuapp.com/docs/information/jam`)
+nyz100 = await fetchJson(`https://api-rztrial.herokuapp.com/api/information/jam`)
 nyz101 = nyz100.result
 nyz102 = `[ *JAM* ]\n`,
 nyz102 += `=> *WIB* : ${nyz101.wib}\n`,
@@ -2310,7 +2310,7 @@ reply(nyz102)
 break
 case 'jamdunia': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
-nyz103 = await fetchJson(`https://myselfff.herokuapp.com/docs/information/jamdunia`)
+nyz103 = await fetchJson(`https://api-rztrial.herokuapp.com/api/information/jamdunia`)
 nyz104 = nyz103.result
 nyz105 = `[ *JAM DUNIA* ]\n`,
 nyz105 += `=> *WITA* : ${nyz104.wita}\n`,
@@ -2323,7 +2323,7 @@ reply(nyz105)
 break
 case 'jadwalbola': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
-nyz106 = await fetchJson(`https://myselfff.herokuapp.com/docs/information/jadwalbola`)
+nyz106 = await fetchJson(`https://api-rztrial.herokuapp.com/api/information/jadwalbola`)
 nyz107 = nyz106.result
 nyz108 = `[ *JADWAL BOLA* ]\n`,
 nyz108 += `=> *WAKTU* : ${nyz107.waktu}\n`,
@@ -2333,7 +2333,7 @@ reply(nyz108)
 break
 case 'infohoax': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
-nyz109 = await fetchJson(`https://myselfff.herokuapp.com/docs/information/infohoax`)
+nyz109 = await fetchJson(`https://api-rztrial.herokuapp.com/api/information/infohoax`)
 nyz110 = nyz109.result
 nyz111 = `[ *INFO HOAX* ]\n`,
 nyz111 += `=> *TITLE* : ${nyz110.title}\n`,
@@ -2344,13 +2344,13 @@ reply(nyz111)
 break 
 case 'coronameninggal': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
-nyz112 = await fetchJson(`https://myselfff.herokuapp.com/docs/information/coronameninggal`)
+nyz112 = await fetchJson(`https://api-rztrial.herokuapp.com/api/information/coronameninggal`)
 nyz113 = `=> *MENINGGAL* : ${nyz112.result.meninggal}`
 reply(nyz113)
 break	
 case 'hadist': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
-nyz117 = await fetchJson(`https://myselfff.herokuapp.com/docs/islamic/hadist`)
+nyz117 = await fetchJson(`https://api-rztrial.herokuapp.com/api/islamic/hadist`)
 nyz118 = `[ *HADIST* ]\n`,
 nyz118 += `=> *NAME* : ${nyz117.list.name}\n`,
 nyz118 += `=> *ID* : ${nyz117.list.id}\n`,
@@ -2361,7 +2361,7 @@ reply(nyz118)
 break
 case 'quran': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
-nyz119 = await fetchJson(`https://myselfff.herokuapp.com/docs/islamic/quran`)
+nyz119 = await fetchJson(`https://api-rztrial.herokuapp.com/api/islamic/quran`)
 nyz120 = `[ *QURAN* ]\n`,
 nyz120 += `=> *QURAN* : ${nyz119.list.quran}\n`,
 nyz120 += `=> *SURAH* : ${nyz119.list.surah}\n`,
@@ -2373,7 +2373,7 @@ reply(nyz120)
 break
 case 'asmaulhusna': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
-nyz121 = await fetchJson(`https://myselfff.herokuapp.com/docs/islamic/asmaulhusna`)
+nyz121 = await fetchJson(`https://api-rztrial.herokuapp.com/api/islamic/asmaulhusna`)
 nyz122 = `[ *ASMAULHUSNA* ]\n`,
 nyz122 += `=> *NUMBER* : ${nyz121.list.number}\n`,
 nyz122 += `=> *LATIN* : ${nyz121.list.latin}\n`,
@@ -2384,7 +2384,7 @@ reply(nyz122)
 break
 case 'kisahnabi': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
-nyz125 = await fetchJson(`https://myselfff.herokuapp.com/docs/islamic/kisahnabi`)
+nyz125 = await fetchJson(`https://api-rztrial.herokuapp.com/api/islamic/kisahnabi`)
 nyz124 = `[ *KISAHNABI* ]\n`,
 nyz124 += `=> *NAME* : ${nyz125.list.name}\n`,
 nyz124 += `=> *KELAHIRAN* : ${nyz125.list.kelahiran}\n`,
@@ -2395,11 +2395,12 @@ reply(nyz124)
 break
 case 'masturbation': case 'jahy': case 'hentai': case 'glasses': case 'gangbang': case 'foot': 
 case 'femdom': case 'cum': case 'ero': case 'cuckold': case 'blowjob': case 'bdsm': 
-case 'ahegao': case 'ass': case 'orgy': case 'panties': case 'pussy': case 'thighs': case 'yuri': 
+case 'ahegao': case 'ass': case 'orgy': case 'panties': case 'pussy': case 'thighs': case 'yuri':
+case 'hentaigif': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG")	 			
 //try{
 //reply("FITUR INI DINONAKTIFKAN SAAT BULAN RAMADHAN")	    
-nyz125 = await fetchJson(`https://myselfff.herokuapp.com/docs/nsfw/${command}`)
+nyz125 = await fetchJson(`https://api-rztrial.herokuapp.com/api/nsfw/${command}?apikey=Rztrial`)
 //nyz126 = await getBuffer(nyz125.result)
 //nayla.sendMessage(from, {image:nyz126},{quoted:nay})
 //} catch (e) {error("ERROR")}	
@@ -2548,7 +2549,7 @@ break
 case 'trenbekasi': case 'trendepok': case 'trenpekanbaru': case 'trensurabaya': case 'trenmakassar': case 'trenbandung':
  case 'trenjakarta': case 'trenmedan': case 'trenpalembang': case 'trensemarang': case 'trentangerang': 
 if (!isRegistered) return reply("ANDA BELUM TERDAFTAR DI DATABASE BOT, SILAHKAN KETIK " + `${prefix}daftar ` + "UNTUK BERGABUNG") 
-ny1 = await fetchJson(`https://myselfff.herokuapp.com/docs/trending/${command1}`)
+ny1 = await fetchJson(`https://api-rztrial.herokuapp.com/api/trending/${command1}`)
 ny2 = `• *NAMA* : ${ny1.result.title}\n`
 ny2 += `• *URL* : ${ny1.result.desc}\n`
 ny2 += `• *VOLUME* : ${ny1.result.volume}\n`
